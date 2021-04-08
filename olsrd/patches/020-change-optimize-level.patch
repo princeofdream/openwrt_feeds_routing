@@ -1,0 +1,25 @@
+From 4100c215ea51c5983d6c58a0fc11ff0b50b5756a Mon Sep 17 00:00:00 2001
+From: James Lee <princeofdream@outlook.com>
+Date: Thu, 8 Apr 2021 14:49:32 +0800
+Subject: [PATCH] change optimize level
+
+---
+ lib/pud/nmealib/Makefile.inc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/pud/nmealib/Makefile.inc b/lib/pud/nmealib/Makefile.inc
+index 6a9fb14..3258baa 100644
+--- a/lib/pud/nmealib/Makefile.inc
++++ b/lib/pud/nmealib/Makefile.inc
+@@ -91,7 +91,7 @@ endif
+ ifeq ($(DEBUG),0)
+ CFLAGS += -O2
+ else
+-CFLAGS += -O0
++CFLAGS += -Os
+ endif
+ 
+ LDFLAGS = -shared -Wl,--warn-common -fPIC
+-- 
+2.29.2
+
